@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Pizza_Relationship_Database_5_5.Models.PizzaModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PizzaName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PizzaName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PizzaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PizzaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PizzaID })
+        </td>
+    </tr>
+}
+
+</table>

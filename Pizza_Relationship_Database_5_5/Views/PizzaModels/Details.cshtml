@@ -1,0 +1,26 @@
+﻿@model Pizza_Relationship_Database_5_5.Models.PizzaModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PizzaModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PizzaName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PizzaName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PizzaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
